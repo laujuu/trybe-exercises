@@ -4,7 +4,7 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 
 > **O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda introdução ao desenvolvimento de software, front-end, back-end, ciência da computação, engenharia de software, metodologias ágeis e habilidades comportamentais.**
 
-#### Markdown Navigation
+## Markdown Navigation
 * [Fundamentos do Desenvolvimento Web](https://github.com/laujuu/trybe-exercises#fundamentos-do-desenvolvimento-web-hourglass_flowing_sand)
 * [Trybe](https://www.betrybe.com/)
 * [Trybe](https://www.betrybe.com/)
@@ -75,7 +75,7 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [ ] 10.3 - Jest - Simulando comportamentos
 - [ ] 10.4 - Projeto - Jest Assíncrono e Mocking
 
-## Desenvolvimento Front-end heavy_check_mark
+## Desenvolvimento Front-end :hourglass_flowing_sand:
 #### Bloco 11: Introdução à React
 - [ ] 11.1 - Introdução - Front-end
 - [ ] 11.1 - Introdução - React
