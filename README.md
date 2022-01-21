@@ -4,11 +4,11 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 
 > **O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda introdução ao desenvolvimento de software, front-end, back-end, ciência da computação, engenharia de software, metodologias ágeis e habilidades comportamentais.**
 
-## Markdown Navigation
+## Conteúdo
 * [Fundamentos do Desenvolvimento Web](https://github.com/laujuu/trybe-exercises#fundamentos-do-desenvolvimento-web-hourglass_flowing_sand)
-* [Trybe](https://www.betrybe.com/)
-* [Trybe](https://www.betrybe.com/)
-* [Trybe](https://www.betrybe.com/)
+* [Desenvolvimento Front-end](https://github.com/laujuu/trybe-exercises#desenvolvimento-front-end-hourglass_flowing_sand)
+* [Desenvolvimento Back-end](https://github.com/laujuu/trybe-exercises#desenvolvimento-back-end-hourglass_flowing_sand)
+* [Ciência da Computação](https://github.com/laujuu/trybe-exercises#ci%C3%AAncia-da-computa%C3%A7%C3%A3o-hourglass_flowing_sand/)
 
 ## Fundamentos do Desenvolvimento Web :hourglass_flowing_sand:
 
@@ -75,6 +75,8 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [ ] 10.3 - Jest - Simulando comportamentos
 - [ ] 10.4 - Projeto - Jest Assíncrono e Mocking
 
+* [Voltar ao topo](https://github.com/laujuu/trybe-exercises#trybe---exerc%C3%ADcios)
+
 ## Desenvolvimento Front-end :hourglass_flowing_sand:
 #### Bloco 11: Introdução à React
 - [ ] 11.1 - Introdução - Front-end
@@ -114,6 +116,9 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [ ] 18.4 - Projeto - StarWars Datatable com Context API e Hooks
 #### Bloco 19: Projeto App de Receitas
 - [ ] 19.1 - Projeto - App de Receitas
+
+
+* [Voltar ao topo](https://github.com/laujuu/trybe-exercises#trybe---exerc%C3%ADcios)
 
 ## Desenvolvimento Back-end :hourglass_flowing_sand:
 #### Bloco 20: Introdução à SQL
@@ -186,6 +191,9 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 #### Bloco 32: Projeto Trybeer II
 - [ ] 32.1 - Projeto - Trybeer v2
 
+* [Voltar ao topo](https://github.com/laujuu/trybe-exercises#trybe---exerc%C3%ADcios)
+
+
 ## Ciência da Computação :hourglass_flowing_sand:
 #### Bloco 33: Arquitetura de Computadores e Redes
 - [ ] 33.1 - Introdução - Ciência da Computação
@@ -219,6 +227,8 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 - [ ] 38.2 - Deque
 - [ ] 38.3 - Pilhas
 - [ ] 38.4 - Projeto - TING - Trybe Is Not Google
+
+* [Voltar ao topo](https://github.com/laujuu/trybe-exercises#trybe---exerc%C3%ADcios)
 
 
 # :rocket: 
