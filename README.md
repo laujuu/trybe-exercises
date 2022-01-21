@@ -8,7 +8,7 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 * [Fundamentos do Desenvolvimento Web](https://github.com/laujuu/trybe-exercises#fundamentos-do-desenvolvimento-web-hourglass_flowing_sand)
 * [Desenvolvimento Front-end](https://github.com/laujuu/trybe-exercises#desenvolvimento-front-end-hourglass_flowing_sand)
 * [Desenvolvimento Back-end](https://github.com/laujuu/trybe-exercises#desenvolvimento-back-end-hourglass_flowing_sand)
-* [Ciência da Computação](https://github.com/laujuu/trybe-exercises#ci%C3%AAncia-da-computa%C3%A7%C3%A3o-hourglass_flowing_sand/)
+* [Ciência da Computação](https://github.com/laujuu/trybe-exercises#ci%C3%AAncia-da-computa%C3%A7%C3%A3o-hourglass_flowing_sand)
 
 ## Fundamentos do Desenvolvimento Web :hourglass_flowing_sand:
 
