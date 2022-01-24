@@ -1,0 +1,91 @@
+// Utilizando o terminal, aplique o comando de criação de diretórios que você aprendeu, crie um diretório chamado unix_tests e navegue até ele.
+ 
+lauju@lauju-desktop:~/Documents/trybe-exercises/01-fundamentos/day-03-unix-and-bash-part-1$ mkdir unix-tests
+lauju@lauju-desktop:~/Documents/trybe-exercises/01-fundamentos/day-03-unix-and-bash-part-1$ cd unix-tests
+
+// Crie um arquivo de texto com o nome trybe.txt .
+
+lauju@lauju-desktop:~/Documents/trybe-exercises/01-fundamentos/day-03-unix-and-bash-part-1/unix-tests$ cat > trybe.txt
+hello world
+^Z
+[1]+  Stopped                 cat > trybe.txt
+lauju@lauju-desktop:~/Documents/trybe-exercises/01-fundamentos/day-03-unix-and-bash-part-1/unix-tests$ ls
+trybe.txt
+
+// Crie uma cópia do arquivo trybe.txt com nome trybe_backup.txt .
+lauju@lauju-desktop:~/Documents/trybe-exercises/01-fundamentos/day-03-unix-and-bash-part-1/unix-tests$ cp trybe.txt trybe_backup.txt
+
+// Renomeie o arquivo trybe.txt .
+lauju@lauju-desktop:~/Documents/trybe-exercises/01-fundamentos/day-03-unix-and-bash-part-1/unix-tests$ mv trybe.txt renamedtrybe.txt
+lauju@lauju-desktop:~/Documents/trybe-exercises/01-fundamentos/day-03-unix-and-bash-part-1/unix-tests$ ls
+renamedtrybe.txt  trybe_backup.txt
+
+// Dentro de unix_tests , crie um novo diretório chamado backup .
+lauju@lauju-desktop:~/Documents/trybe-exercises/01-fundamentos/day-03-unix-and-bash-part-1/unix-tests$ mkdir backup
+
+// Mova o arquivo trybe_backup.txt para o diretório backup 
+lauju@lauju-desktop:~/Documents/trybe-exercises/01-fundamentos/day-03-unix-and-bash-part-1/unix-tests$ mv trybe_backup.txt backup
+
+// Dentro de unix_tests , crie um novo diretório chamado backup2 .
+lauju@lauju-desktop:~/Documents/trybe-exercises/01-fundamentos/day-03-unix-and-bash-part-1/unix-tests$ mkdir backup2
+
+// Mova o arquivo trybe_backup.txt da pasta backup para a pasta backup2 .
+lauju@lauju-desktop:~/Documents/trybe-exercises/01-fundamentos/day-03-unix-and-bash-part-1/unix-tests/backup$ mv trybe_backup.txt ../backup2
+lauju@lauju-desktop:~/Documents/trybe-exercises/01-fundamentos/day-03-unix-and-bash-part-1/unix-tests/backup$ ls
+lauju@lauju-desktop:~/Documents/trybe-exercises/01-fundamentos/day-03-unix-and-bash-part-1/unix-tests/backup$ cd -
+/home/lauju/Documents/trybe-exercises/01-fundamentos/day-03-unix-and-bash-part-1/unix-tests
+lauju@lauju-desktop:~/Documents/trybe-exercises/01-fundamentos/day-03-unix-and-bash-part-1/unix-tests$ cd backup2
+lauju@lauju-desktop:~/Documents/trybe-exercises/01-fundamentos/day-03-unix-and-bash-part-1/unix-tests/backup2$ ls
+trybe_backup.txt
+lauju@lauju-desktop:~/Documents/trybe-exercises/01-fundamentos/day-03-unix-and-bash-part-1/unix-tests/backup2$ cd -
+/home/lauju/Documents/trybe-exercises/01-fundamentos/day-03-unix-and-bash-part-1/unix-tests
+
+// Apague a pasta backup .
+lauju@lauju-desktop:~/Documents/trybe-exercises/01-fundamentos/day-03-unix-and-bash-part-1/unix-tests$ rmdir backup
+
+// Renomeie a pasta backup2 para backup .
+lauju@lauju-desktop:~/Documents/trybe-exercises/01-fundamentos/day-03-unix-and-bash-part-1/unix-tests$ mv backup2 backup
+lauju@lauju-desktop:~/Documents/trybe-exercises/01-fundamentos/day-03-unix-and-bash-part-1/unix-tests$ ls
+backup  renamedtrybe.txt
+
+// Apague o diretório backup .
+lauju@lauju-desktop:~/Documents/trybe-exercises/01-fundamentos/day-03-unix-and-bash-part-1/unix-tests$ rm -rf backup
+lauju@lauju-desktop:~/Documents/trybe-exercises/01-fundamentos/day-03-unix-and-bash-part-1/unix-tests$ ls
+renamedtrybe.txt
+lauju@lauju-desktop:~/Documents/trybe-exercises/01-fundamentos/day-03-unix-and-bash-part-1/unix-tests$ clear
+
+
+// Para os exercícios 14 e 15, crie, de forma manual na parte gráfica do seu sistema operacional (através do mouse), um arquivo de texto com o conteúdo abaixo, chamado skills.txt :
+lauju@lauju-desktop:~/Documents/trybe-exercises/01-fundamentos/day-03-unix-and-bash-part-1/unix-tests$ cat > skills.txt
+Internet
+Unix
+Bash
+HTML
+CSS
+JavaScript
+React
+SQL^Z
+[6]+  Stopped                 cat > skills.txt
+
+// Mostre na tela as 5 primeiras skills do arquivo skills.txt .
+lauju@lauju-desktop:~/Documents/trybe-exercises/01-fundamentos/day-03-unix-and-bash-part-1/unix-tests$ head -5 skills.txt
+Internet
+Unix
+Bash
+HTML
+CSS
+
+// Mostre na tela as 4 últimas skills do arquivo skills.txt .
+lauju@lauju-desktop:~/Documents/trybe-exercises/01-fundamentos/day-03-unix-and-bash-part-1/unix-tests$ tail -4 skills.txt
+HTML
+CSS
+JavaScript
+React
+
+//Apague todos os arquivos que terminem em .txt .
+lauju@lauju-desktop:~/Documents/trybe-exercises/01-fundamentos/day-03-unix-and-bash-part-1/unix-tests$ ls
+skills.txt
+lauju@lauju-desktop:~/Documents/trybe-exercises/01-fundamentos/day-03-unix-and-bash-part-1/unix-tests$ rm *.txt
+lauju@lauju-desktop:~/Documents/trybe-exercises/01-fundamentos/day-03-unix-and-bash-part-1/unix-tests$ ls
+lauju@lauju-desktop:~/Documents/trybe-exercises/01-fundamentos/day-03-unix-and-bash-part-1/unix-tests$ 
+
