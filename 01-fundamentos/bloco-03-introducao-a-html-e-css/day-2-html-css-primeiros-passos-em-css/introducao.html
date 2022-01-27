@@ -1,0 +1,49 @@
+
+<!-- 
+  REQUISITOS: 
+1 - Modifique o tamanho do h1 para 65 pixels
+2 - Modifique a cor do texto do h1 para laranja
+3 - Modifique a cor de fundo da lista não ordenada
+4 - Crie uma classe para modificar a cor de fundo da tag p e da ul ao mesmo tempo
+-->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>HTML</title>
+    <style>
+
+        body {
+            background-color: palevioletred;
+        }
+
+       /*Modifica o tamanho da fonte e a cor do h1*/
+        h1 {
+            font-size: 65px;
+            color: orange;
+        }
+
+        /* Modifica a cor de fundo da lista não ordenada */
+        ul {
+            background-color: pink;
+        }
+
+        /* Classe para modificar a tag p e da ul ao mesmo tempo*/
+        .samecolor {
+            color: white;
+        }
+
+    </style>
+  </head>
+  <body>
+    <h1>Exercícios 3.2</h1>
+    <p class="samecolor">Qual é a sua cor favorita?</p>
+    <ul class="samecolor">
+      <li><a style="color: yellow;">A</a>marelo</li>
+      <li><a style="color: red;">V</a>ermelho</li>
+      <li><a style="color: brown;">M</a>arrom</li>
+    </ul>
+  </body>
+</html>
