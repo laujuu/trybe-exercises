@@ -1,0 +1,33 @@
+h1 {
+
+    /* Altera estilo da font */
+    font-family: sans-serif;
+}
+
+p {
+    /* Fonte 3 vezes o tamanho padrão */
+    font-size: 3em;
+
+    /* Nivel de "boldeness" da font */
+    font-weight: 600;
+}
+
+body {
+    /* Tamanho da fonte */
+    font-size: 16px;
+
+    /* Espaçamento das linhas */
+    line-height: 30px;
+
+    /* Alinhamento do Texto */
+    text-align: center;
+
+    /* Cor de fundo */
+    background-color: pink;
+}
+
+
+ul {
+    /* Remove o estilo da lista (nesse caso as bolinhas) */
+    list-style: none;
+}
