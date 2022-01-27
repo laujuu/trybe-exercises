@@ -1,0 +1,64 @@
+<!--
+    REQUISITOS:
+1 - Modifique o família do h1 para sans-serif
+2 - Deixe o parágrafo com o font-weight 600
+3 - Modifique o font-size do body para 16px
+4 - Coloque o tamanho do parágrafo com o tamanho de 3 vezes o padrão do body
+5 - Explore as propriedades font-style, line-height, text-align e text-decoration
+6 - Troque a cor de fundo de cada item da lista para a cor correspondente ao texto
+-->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>HTML</title>
+    <style>
+
+        h1 {
+
+            /* Altera estilo da font */
+            font-family: sans-serif;
+        }
+
+        p {
+            /* Fonte 3 vezes o tamanho padrão */
+            font-size: 3em;
+
+            /* Nivel de "boldeness" da font */
+            font-weight: 600;
+        }
+
+        body {
+            /* Tamanho da fonte */
+            font-size: 16px;
+
+            /* Espaçamento das linhas */
+            line-height: 30px;
+
+            /* Alinhamento do Texto */
+            text-align: center;
+
+            /* Cor de fundo */
+            background-color: pink;
+        }
+
+        
+        ul {
+            /* Remove o estilo da lista (nesse caso as bolinhas) */
+            list-style: none;
+        }
+
+    </style>
+  </head>
+  <body>
+    <h1>Exercícios 3.2</h1>
+    <p>Qual é a sua cor favorita?</p>
+    <ul>
+        <li><a style="color: yellow;">A</a>marelo</li>
+        <li><a style="color: red;">V</a>ermelho</li>
+        <li><a style="color: brown;">M</a>arrom</li>
+    </ul>
+  </body>
+</html>
