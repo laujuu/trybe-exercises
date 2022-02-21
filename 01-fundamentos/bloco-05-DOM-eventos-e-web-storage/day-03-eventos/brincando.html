@@ -1,0 +1,180 @@
+<!-- brincando com algumas funcoes -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Quer saber oque tem no botao abaixo</p>
+    
+    <button class="myBtn" onclick="maisInfo()">então clica aqui</button>
+
+    <p class="continuaTxt"></p>
+
+    <script>
+
+        function maisInfo(){
+            let txtMaisInfo = document.querySelector('.continuaTxt')
+            txtMaisInfo.innerText = 'tem nada aqui uai'
+            
+            let btn = document.querySelector('.myBtn')
+            btn.innerText = 'xD'
+        }
+        
+    </script>
+
+</body>
+</html>
+
+
+CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
+USE `mydb`;
+-- Table Usuario
+CREATE TABLE IF NOT EXISTS `Usuario` (
+  `Id` INT NOT NULL AUTO_INCREMENT,
+  `Nome` VARCHAR(45) NULL,
+  `Senha` VARCHAR(45) NULL,
+  `Email` VARCHAR(45) NULL,
+  `Tipo` VARCHAR(45) NULL,
+  PRIMARY KEY (`Id`))
+ENGINE = InnoDB;
+
+
+-- Table Instituicao
+CREATE TABLE IF NOT EXISTS `Instituicao` (
+  `Id` INT NOT NULL AUTO_INCREMENT,
+  `Instituicao` VARCHAR(45) NULL,
+  PRIMARY KEY (`Id`))
+ENGINE = InnoDB;
+
+
+-- Table `Turma`
+CREATE TABLE IF NOT EXISTS `Turma` (
+  `Id` INT NOT NULL AUTO_INCREMENT,
+  `Turma` VARCHAR(45) NULL,
+  `Instituicao_Id` INT NOT NULL,
+  PRIMARY KEY (`Id`),
+  INDEX `fk_Turma_Instituicao1_idx` (`Instituicao_Id` ASC) VISIBLE,
+  CONSTRAINT `fk_Turma_Instituicao1`
+    FOREIGN KEY (`Instituicao_Id`)
+    REFERENCES `mydb`.`Instituicao` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- Table `mydb`.`Jogo`
+CREATE TABLE IF NOT EXISTS `Jogo` (
+  `Id` INT NOT NULL AUTO_INCREMENT,
+  `Nome` VARCHAR(45) NULL,
+  PRIMARY KEY (`Id`))
+ENGINE = InnoDB;
+
+
+-- Table `Alternativa`
+CREATE TABLE IF NOT EXISTS `Alternativa` (
+  `Id` INT NOT NULL AUTO_INCREMENT,
+  `Pergunta` VARCHAR(45) NULL,
+  `Alternativa1` VARCHAR(45) NULL,
+  `Alternativa2` VARCHAR(45) NULL,
+  `Alternativa3` VARCHAR(45) NULL,
+  `Alternativa4` VARCHAR(45) NULL,
+  `RespostaCerta` VARCHAR(45) NULL,
+  `Etapa` VARCHAR(45) NULL,
+  `Dica` VARCHAR(45) NULL,
+  `Jogo_Id` INT NOT NULL,
+  PRIMARY KEY (`Id`, `Jogo_Id`),
+  INDEX `fk_Alternativa_Jogo1_idx` (`Jogo_Id` ASC) VISIBLE,
+  CONSTRAINT `fk_Alternativa_Jogo1`
+    FOREIGN KEY (`Jogo_Id`)
+    REFERENCES `mydb`.`Jogo` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- Table `Regra`
+CREATE TABLE IF NOT EXISTS `Regra` (
+  `Id` INT NOT NULL,
+  `Regra` VARCHAR(45) NULL,
+  `PontoFase1` VARCHAR(45) NULL,
+  `PontoFase2` VARCHAR(45) NULL,
+  `PontoFase3` VARCHAR(45) NULL,
+  `PontoFase4` VARCHAR(45) NULL,
+  `TempoJogo` VARCHAR(45) NULL,
+  `Jogo_Id` INT NOT NULL,
+  PRIMARY KEY (`Id`, `Jogo_Id`),
+  INDEX `fk_Regra_Jogo1_idx` (`Jogo_Id` ASC) VISIBLE,
+  CONSTRAINT `fk_Regra_Jogo1`
+    FOREIGN KEY (`Jogo_Id`)
+    REFERENCES `mydb`.`Jogo` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+
+-- Table `Usuario_Turma`
+CREATE TABLE IF NOT EXISTS `Usuario_Turma` (
+  `Usuario_Id` INT NOT NULL,
+  `Turma_Id` INT NOT NULL,
+  PRIMARY KEY (`Usuario_Id`, `Turma_Id`),
+  INDEX `fk_Usuario_has_Turma_Turma1_idx` (`Turma_Id` ASC) VISIBLE,
+  INDEX `fk_Usuario_has_Turma_Usuario_idx` (`Usuario_Id` ASC) VISIBLE,
+  CONSTRAINT `fk_Usuario_has_Turma_Usuario`
+    FOREIGN KEY (`Usuario_Id`)
+    REFERENCES `mydb`.`Usuario` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Usuario_has_Turma_Turma1`
+    FOREIGN KEY (`Turma_Id`)
+    REFERENCES `mydb`.`Turma` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+-- Table `Usuario__Jogo`
+CREATE TABLE IF NOT EXISTS `Usuario__Jogo` (
+  `Id_usuario` INT NOT NULL,
+  `Id_Jogo` INT NOT NULL,
+  `Erro` VARCHAR(45) NULL,
+  `Tempo` VARCHAR(45) NULL,
+  `Acerto` INT NULL,
+  `Ponto` INT NULL,
+  PRIMARY KEY (`Id_usuario`, `Id_Jogo`),
+  INDEX `fk_Usuario_has_Jogo_Jogo1_idx` (`Id_Jogo` ASC) VISIBLE,
+  INDEX `fk_Usuario_has_Jogo_Usuario1_idx` (`Id_usuario` ASC) VISIBLE,
+  CONSTRAINT `fk_Usuario_has_Jogo_Usuario1`
+    FOREIGN KEY (`Id_usuario`)
+    REFERENCES `mydb`.`Usuario` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Usuario_has_Jogo_Jogo1`
+    FOREIGN KEY (`Id_Jogo`)
+    REFERENCES `mydb`.`Jogo` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+-- Table `Turma_Jogo`
+CREATE TABLE IF NOT EXISTS `Turma_Jogo` (
+  `Turma_Id` INT NOT NULL,
+  `Jogo_Id` INT NOT NULL,
+  PRIMARY KEY (`Turma_Id`, `Jogo_Id`),
+  INDEX `fk_Turma_has_Jogo_Jogo1_idx` (`Jogo_Id` ASC) VISIBLE,
+  INDEX `fk_Turma_has_Jogo_Turma1_idx` (`Turma_Id` ASC) VISIBLE,
+  CONSTRAINT `fk_Turma_has_Jogo_Turma1`
+    FOREIGN KEY (`Turma_Id`)
+    REFERENCES `mydb`.`Turma` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Turma_has_Jogo_Jogo1`
+    FOREIGN KEY (`Jogo_Id`)
+    REFERENCES `mydb`.`Jogo` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
