@@ -3,7 +3,12 @@
 
 Hoje o exercicio do dia foi um pouco diferente, pegamos ele através de um fork, trabalhamos em uma branch especifica, e depois fizemos o pull request no repositorio original do exercicio.
 
-Acima você conferir o resultado final através do index.html e o style.css
+Acima você conferir o resultado final através do tech-galery.html e o style.css
+
+Porém fica aqui a prévia de como ficou
+
+![image](https://user-images.githubusercontent.com/37710776/155326149-a2388fdf-b932-4640-88ee-dd361a949bd7.png)
+
 
 
 
