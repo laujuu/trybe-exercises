@@ -1,0 +1,87 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu';
+}
+
+/* Requisito 1 */
+.header-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  background-color: black;
+  font-size: small;
+}
+
+.header-container h3 {
+  color: grey;
+}
+
+.header-img {
+  width: 70px;
+}
+
+/* Requisito 2 */
+.takealook-container {
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+/* Requisito 3 */
+.galery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px 0;
+
+}
+
+.image-container {
+  display: flex;
+  width: 600px;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  
+}
+
+.image-container-item {
+  margin: 5px 5px;
+  height: 180px;
+  box-shadow: 3px 3px grey;
+  background-color:blanchedalmond;
+  border-radius: 10px;
+}
+
+.gallery-img {
+  width: 150px;
+  
+}
+
+.break-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+hr {
+  width: 100px;
+  
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0px;
+}
+
+.social-img {
+  width: 25px;
+  margin-left: 10px;
+}
